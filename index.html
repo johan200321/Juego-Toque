@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Juego Toque</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <div id="menu">
+    <h1>🔥 ¡Toca el Círculo EXTREMO! 🔥</h1>
+    <div>
+      <label for="difficulty">Dificultad:</label>
+      <select id="difficulty">
+        <option value="facil">Fácil</option>
+        <option value="normal" selected>Normal</option>
+        <option value="dificil">Difícil</option>
+      </select>
+    </div>
+    <button id="startBtn">¡Jugar!</button>
+  </div>
+
+  <div id="gameUI" style="display:none">
+    <div id="score">Puntos: 0</div>
+    <div id="highScore">🏆 Récord: 0</div>
+    <div id="level">Nivel: 1</div>
+    <div id="medal">Medalla: 🥉</div>
+    <div id="gameArea"></div>
+  </div>
+
+  <audio id="clickSound" src="https://www.soundjay.com/button/beep-07.wav" preload="auto"></audio>
+  <audio id="failSound" src="https://www.soundjay.com/button/beep-10.wav" preload="auto"></audio>
+  <audio id="bgMusic" src="https://www.bensound.com/bensound-music/bensound-epic.mp3" loop></audio>
+
+  <script src="particles.min.js"></script>
+  <script>
+    particlesJS.load('particles-js', 'particles-config.json', function() {
+      console.log('✨ Partículas cargadas');
+    });
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
